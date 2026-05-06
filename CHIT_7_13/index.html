@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function validate() {
+  let user = document.getElementById("user").value;
+  let pass = document.getElementById("pass").value;
+
+  // Username checks
+  if (user.length < 8 ||
+      !/[A-Z]/.test(user) ||
+      !/[a-z]/.test(user) ||
+      !/[0-9]/.test(user) ||
+      !/[^A-Za-z0-9]/.test(user)) {
+    alert("Username must have 1 Capital, 1 Small, 1 Number, 1 Special char & min 8 length");
+    return false;
+  }
+
+  // Password checks
+  if (pass.length < 8 ||
+      !/[A-Z]/.test(pass) ||
+      !/[^A-Za-z0-9]/.test(pass)) {
+    alert("Password must have 1 Capital, 1 Special char & min 8 length");
+    return false;
+  }
+
+  alert("Login Successful");
+  return true;
+}
+  </script>
+</head>
+
+<body>
+
+<form onsubmit="return validate()">
+  <div class="header">Login</div>
+  <div class="form-body">
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+    <input type="submit" value="Login">
+  </div>
+</form>
+
+</body>
+</html>

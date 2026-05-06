@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Portal - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Login Successful!");
+      window.location.href = "index.html";
+    }
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <div class="card form-card">
+    <h2>Student Login</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

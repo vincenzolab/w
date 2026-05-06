@@ -1,0 +1,18 @@
+<html>
+<body>
+
+<h2>User Data</h2>
+
+<p id="d"></p>
+
+<script>
+
+var data = JSON.parse(localStorage.getItem("user"));
+
+document.getElementById("d").innerHTML =
+"Name: " + data[0] + "<br>Email: " + data[1];
+
+</script>
+
+</body>
+</html>

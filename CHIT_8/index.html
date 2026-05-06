@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>AJAX Example</h2>
+  <button onclick="loadData()">Get Data</button>
+  <p id="output"></p>
+</div>
+
+<script>
+// Load stored data on page load
+window.onload = function() {
+  const storedData = localStorage.getItem("ajaxData");
+  if (storedData) {
+    const output = document.getElementById("output");
+    output.innerHTML = storedData;
+    output.style.display = "inline-block";
+  }
+};
+
+function loadData() {
+  fetch('data.txt')
+    .then(res => res.text())
+    .then(data => {
+      const output = document.getElementById("output");
+      // Append the new data to previous data
+      const newData = output.innerHTML ? output.innerHTML + "<br>" + data : data;
+      output.innerHTML = newData;
+      output.style.display = "inline-block";
+      
+      // Store the updated data
+      localStorage.setItem("ajaxData", newData);
+    })
+    .catch(err => console.error(err));
+}
+</script>
+
+</body>
+</html>

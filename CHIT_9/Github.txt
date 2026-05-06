@@ -1,0 +1,36 @@
+▶️ How to Do (Step-by-Step in Lab)
+🔹 1. Create GitHub Account
+Open browser → go to github.com
+Click Sign Up
+Create account
+
+🔹 2. Create Repository
+Click New Repository
+Give name (e.g., wad)
+Click Create
+Copy the URL
+
+
+🔹 3. Open Terminal (Linux)
+
+👉 Open terminal in your folder
+
+cd Desktop
+mkdir myproject
+cd myproject
+
+🔹 4. Create File
+nano index.html
+
+
+Type anything
+Press Ctrl + X → Y → Enter
+
+
+🔹 5. Git Commands (Main Part)
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin URL
+git push -u origin main

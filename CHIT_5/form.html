@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<h2>Registration</h2>
+
+Name: <input id="n"><br><br>
+Email: <input id="e"><br><br>
+
+<button onclick="save()">Submit</button>
+
+<script>
+function save(){
+
+var n = document.getElementById("n").value;
+var e = document.getElementById("e").value;
+
+var arr = [];
+
+arr.push(n);
+arr.push(e);
+
+localStorage.setItem("user", JSON.stringify(arr));
+
+window.location="view.html";
+}
+</script>
+
+</body>
+</html>

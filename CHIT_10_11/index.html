@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-box">
+  <h2>Registration Form</h2>
+
+  <form>
+    <input type="text" placeholder="Name" required><br>
+    <input type="password" placeholder="Password" required><br>
+    <input type="email" placeholder="Email" required><br>
+
+    <div class="mobile-input-group">
+      <select>
+        <option>+91</option>
+        <option>+1</option>
+      </select>
+      <input type="tel" placeholder="Mobile" pattern="[0-9]{10}" required>
+    </div><br>
+
+    Gender:
+    <input type="radio" name="g" value="M" required>M
+    <input type="radio" name="g" value="F" required>F<br><br>
+
+    DOB:
+    <input type="date" required><br><br>
+
+    Languages:
+    <input type="checkbox">Eng
+    <input type="checkbox">Mar
+    <input type="checkbox">Hin
+    <input type="checkbox">Tam<br>
+
+    <textarea placeholder="Address"></textarea><br>
+
+    <input type="submit" value="Register">
+  </form>
+</div>
+
+</body>
+</html>
+
+
