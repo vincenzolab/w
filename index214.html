@@ -1,0 +1,78 @@
+<head>
+<style>
+
+body{
+text-align:center;
+background:lightblue;
+}
+
+.box{
+margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return check()">
+
+<input id="f" placeholder="First Name"><br><br>
+
+<input id="l" placeholder="Last Name"><br><br>
+
+<input type="password" id="p" placeholder="Password"><br><br>
+
+<input id="e" placeholder="Email"><br><br>
+
+<input id="m" placeholder="Mobile"><br><br>
+
+<input id="a" placeholder="Address"><br><br>
+
+<button>Submit</button>
+
+</form>
+
+</div>
+
+<script>
+
+function check(){
+
+var f=document.getElementById("f").value
+var l=document.getElementById("l").value
+var p=document.getElementById("p").value
+var e=document.getElementById("e").value
+var m=document.getElementById("m").value
+var a=document.getElementById("a").value
+
+if(f.length<6)
+alert("Invalid First Name")
+
+else if(p.length<6)
+alert("Invalid Password")
+
+else if(e.indexOf("@")==-1)
+alert("Invalid Email")
+
+else if(m.length!=10)
+alert("Invalid Mobile")
+
+else if(l=="" || a=="")
+alert("Empty Field")
+
+else
+alert("Valid Data")
+
+return false
+
+}
+
+</script>
+
+</body>
+</html>
